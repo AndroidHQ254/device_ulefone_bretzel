@@ -63,6 +63,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# System properties
--include $(LOCAL_PATH)/system_prop.mk
