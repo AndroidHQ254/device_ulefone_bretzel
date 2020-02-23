@@ -18,3 +18,7 @@ Front Camera | 16 MP
 Release Date | June 2019
 
 ![Infinix Note 6](https://fdn2.gsmarena.com/vv/pics/infinix/infinix-note-6-x610-3.jpg "Infinix Note 6")
+
+### Patches for fixing video
+- https://github.com/UMIDIGI-MT6763-Development/external_skia_src_gpu
+- https://github.com/UMIDIGI-MT6763-Development/frameworks_base_libs_hwui_surfacetexture
