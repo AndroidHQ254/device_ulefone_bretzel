@@ -5,6 +5,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Release name
+PRODUCT_RELEASE_NAME := Infinix Note 6
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -32,14 +35,13 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-BUILD_FINGERPRINT := Infinix/H651B/Infinix-X610:9/PPR1.180610.011/AB-200805V370:user/release-keys
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "Infinix/H651B/Infinix-X610:9/PPR1.180610.011/AB-200805V370:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="full_x610_h651-user 9 PPR1.180610.011 31055 release-keys"
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="full_x610_h651-user 9 PPR1.180610.011 31055 release-keys" \
     TARGET_DEVICE="Infinix-X610" \
     PRODUCT_NAME="Infinix-X610"
 
-# GMS
+# GMS as per stock
 PRODUCT_GMS_CLIENTID_BASE := android-transsion-infinix-rev1
