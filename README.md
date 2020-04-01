@@ -25,3 +25,6 @@ Release Date | June 2019
 
 ### Patches for fix fingerprint
 - https://github.com/UMIDIGI-MT6763-Development/frameworks_base_biometrics
+
+### Patches for fix offline charging
+- https://github.com/UMIDIGI-MT6763-Development/system_core/blob/master/fix-offline-charger.patch
