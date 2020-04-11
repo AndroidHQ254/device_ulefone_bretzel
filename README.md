@@ -28,3 +28,12 @@ Release Date | June 2019
 
 ### Patches for fix offline charging
 - https://github.com/UMIDIGI-MT6763-Development/system_core/blob/master/fix-offline-charger.patch
+
+### Patches for fix RIL (VoLTE is not supported for now)
+- https://github.com/AgentFabulous/vendor_mediatek_hardware_telephony-ext
+
+put in: vendor/mediatek/hardware/telephony-ext
+
+- https://github.com/PeterCxy/vendor_mediatek_hardware_interfaces
+
+put in: vendor/mediatek/hardware/interfaces
