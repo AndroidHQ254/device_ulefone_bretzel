@@ -28,6 +28,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# Display
+PRODUCT_PACKAGES += \
+    libvulkan \
+    libRSDriver_mtk
+
 # Init cripts
 PRODUCT_PACKAGES += \
     init.mt6765.rc \
@@ -58,8 +63,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.xml
 
-# Telephony
+# RIL
 PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
     telephony-ext \
     mtk-telephony-ext
 
