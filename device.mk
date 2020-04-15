@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    lineage.livedisplay@2.0-service-mediatek
+
 # Overlay from mtk-telephony-ext
 include vendor/mediatek/hardware/telephony-ext/overlay.mk
 
