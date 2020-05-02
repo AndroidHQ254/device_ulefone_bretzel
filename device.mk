@@ -8,10 +8,6 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/infinix/x610_h651/x610_h651-vendor.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
 # A/B
 AB_OTA_UPDATER := false
 
@@ -52,8 +48,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lineage.livedisplay@2.0-service-mediatek
 
-# Overlay from mtk-telephony-ext
-include vendor/mediatek/hardware/telephony-ext/overlay.mk
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -66,16 +63,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.camera.xml
-
-# RIL
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    telephony-ext \
-    mtk-telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_props.mk
