@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_x610_h651.mk
+    $(LOCAL_DIR)/lineage_x610_h651.mk
