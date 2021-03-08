@@ -51,9 +51,6 @@ TARGET_NO_BOOTLOADER := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Symbols
-TARGET_LD_SHIM_LIBS := /system/lib/libshowlogo.so|libshim_showlogo.so
-
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
@@ -106,6 +103,9 @@ VENDOR_SECURITY_PATCH := 2020-08-05
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
+# Shim
+TARGET_LD_SHIM_LIBS := /system/lib/libshowlogo.so|libshim_showlogo.so
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += vendor/infinix/x610_h651
