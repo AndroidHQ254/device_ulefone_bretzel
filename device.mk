@@ -29,6 +29,11 @@ PRODUCT_PACKAGES += \
     libvulkan \
     libRSDriver_mtk
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # Init cripts
 PRODUCT_PACKAGES += \
     fstab.enableswap \
