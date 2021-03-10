@@ -1,6 +1,3 @@
-# Hotspot
-bin/netd
-
 # Offline Charging
 bin/kpoc_charger
 etc/init/kpoc_charger.rc
