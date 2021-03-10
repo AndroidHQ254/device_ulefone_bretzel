@@ -1,6 +1,3 @@
-# CameraGo
--app/CameraGo/CameraGo.apk
-
 # RIL
 vendor/lib64/libmtk-ril.so:lib64/libmtk-ril.so
 
