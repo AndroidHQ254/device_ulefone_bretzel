@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
     fstab.enableswap \
     init.mt6763.rc \
     fstab.mt6763 \
-    init.safailnet.rc
+    init.safailnet.rc \
+    fstab.mt6763_ramdisk
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
