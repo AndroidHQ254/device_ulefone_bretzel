@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6765 \
+    fstab.mt6765_ramdisk \
     init.mt6765.rc \
     init.safailnet.rc
 
