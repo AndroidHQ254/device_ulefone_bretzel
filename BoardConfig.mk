@@ -117,6 +117,10 @@ TARGET_LD_SHIM_LIBS := /system/lib/libshowlogo.so|libshim_showlogo.so
 # Soong
 PRODUCT_SOONG_NAMESPACES += vendor/infinix/x610_h651
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libshowlogo.so|libshim_showlogo.so
+
 # Treble
 BOARD_VNDK_VERSION := current
 
