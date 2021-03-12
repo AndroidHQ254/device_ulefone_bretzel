@@ -114,6 +114,10 @@ PRODUCT_SOONG_NAMESPACES += vendor/ulefone/bretzel
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-05-05
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libshowlogo.so|libshim_showlogo.so
+
 # Treble
 BOARD_VNDK_VERSION := current
 
