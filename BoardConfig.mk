@@ -122,7 +122,7 @@ TARGET_LD_SHIM_LIBS := \
 BOARD_VNDK_VERSION := current
 
 # Board init
-TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_bretzel
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_bretzel
 TARGET_RECOVERY_DEVICE_MODULES := libinit_bretzel
 
 # system.prop
