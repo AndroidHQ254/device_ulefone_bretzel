@@ -105,6 +105,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_showlogo
 
+# Flipendo
+PRODUCT_PACKAGES += \
+    Flipendo
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/Flipendo/pixel_experience_2020.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_experience_2020.xml
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 28
 PRODUCT_EXTRA_VNDK_VERSIONS := 28

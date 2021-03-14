@@ -510,4 +510,7 @@
     manually by the user. Off by default, since the expected haptic feedback may not be available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
+    <!-- Package name that will receive an explicit manifest broadcast for
+         android.os.action.POWER_SAVE_MODE_CHANGED. -->
+    <string name="config_powerSaveModeChangedListenerPackage">com.google.android.flipendo</string>
 </resources>
