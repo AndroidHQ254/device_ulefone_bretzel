@@ -29,6 +29,13 @@ PRODUCT_PACKAGES += \
     libvulkan \
     libRSDriver_mtk
 
+# Flipendo
+PRODUCT_PACKAGES += \
+    Flipendo
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/Flipendo/pixel_experience_2020.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_experience_2020.xml
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
