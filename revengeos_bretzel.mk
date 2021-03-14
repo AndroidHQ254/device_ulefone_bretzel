@@ -31,10 +31,3 @@ PRODUCT_MODEL := Armor X5
 PRODUCT_NAME := revengeos_bretzel
 
 PRODUCT_GMS_CLIENTID_BASE := android-gotron
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="bretzel" \
-    PRODUCT_NAME="bretzel" \
-    PRIVATE_BUILD_DESC="full_k63v2_64_bsp-user 9 PPR1.180610.011 1587533053 release-keys"
-
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ3A.200705.002/6506677:user/release-keys"

@@ -121,5 +121,9 @@ TARGET_LD_SHIM_LIBS := \
 # Treble
 BOARD_VNDK_VERSION := current
 
+# Board init
+TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_bretzel
+TARGET_RECOVERY_DEVICE_MODULES := libinit_bretzel
+
 # system.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
