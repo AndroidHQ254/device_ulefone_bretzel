@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0:64 \
     android.hardware.secure_element@1.1:64 \
     com.android.nfc_extras \
+    NfcNci \
     Tag
 
 PRODUCT_BOOT_JARS += \
