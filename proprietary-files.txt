@@ -19,9 +19,11 @@ lib/libnfc_st_dta.so
 lib/libstnfc-nci.so
 lib/libstnfc_nci_jni.so
 lib/libicuXD.so
+lib/libmetricslogger.so
 lib64/libdtaNfaProvider.so
 lib64/libnfc_st_dta_jni.so
 lib64/libnfc_st_dta.so
 lib64/libstnfc-nci.so
 lib64/libstnfc_nci_jni.so
 lib64/libicuXD.so
+lib64/libmetricslogger.so
