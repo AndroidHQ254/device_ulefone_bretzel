@@ -88,3 +88,8 @@ ro.build.release_type=release
 
 # Disable debugging strict mode toasts
 persist.sys.strictmode.disable=true
+
+# ADB
+ro.adb.secure=0
+persist.sys.usb.config=adb
+service.adb.root=1
