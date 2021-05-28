@@ -1,7 +1,7 @@
 [
     {
         "remote":       "github",
-        "repository":   "RevengeOS-Devices/android_vendor_ulefone_bretzel",
+        "repository":   "RevengeOS-Devices/vendor_ulefone_bretzel",
         "target_path":  "vendor/ulefone/bretzel",
         "revision":     "r11.0"
     }
