@@ -28,14 +28,6 @@ PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix Note 6
 PRODUCT_MANUFACTURER := Infinix
 
-# Product characteristics
-PRODUCT_AAPT_CONFIG := xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2160
-TARGET_SCREEN_WIDTH := 1080
-
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "Infinix/H651B/Infinix-X610:9/PPR1.180610.011/AB-200805V370:user/release-keys"
 
