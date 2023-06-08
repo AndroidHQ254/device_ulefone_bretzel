@@ -1,0 +1,4 @@
+allow init rootfs:lnk_file setattr;
+allow init kernel:system module_request;
+allow init kernel:security setcheckreqprot;
+allow init sysfs:file { write open };
