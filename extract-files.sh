@@ -10,15 +10,13 @@ set -e
 DEVICE=x610_h651
 VENDOR=infinix
 
-INITIAL_COPYRIGHT_YEAR=2019
-
-BLOB_ROOT="vendor/${VENDOR}/${DEVICE}"
+export DEVICE_BRINGUP_YEAR=2023
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-LINEAGE_ROOT="${MY_DIR}"/../../..
+LINEAGE_ROOT="${MY_DIR}/../../.."
 
 HELPER="${LINEAGE_ROOT}/vendor/lineage/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
@@ -30,8 +28,8 @@ source "${HELPER}"
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
-SECTION=
 KANG=
+SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
@@ -56,12 +54,19 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
-# Initialize the helper for common device
-setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
+function blob_fixup() {
+    case "${1}" in
+        lib64/libmtk-ril.so)
+            sed -i 's|AT+EAIC=2|AT+EAIC=3|g' "${2}"
+            ;;
+    esac
+}
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
 
-sed -i 's/AT+EAIC=2/AT+EAIC=3/g' "${BLOB_ROOT}/proprietary/lib64/libmtk-ril.so"
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+
+BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
 "${MY_DIR}/setup-makefiles.sh"

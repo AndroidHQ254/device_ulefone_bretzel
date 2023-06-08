@@ -7,9 +7,10 @@
 
 set -e
 
-DEVICE=x610_h651
-VENDOR=infinix
-INITIAL_COPYRIGHT_YEAR=2019
+export DEVICE=x610_h651
+export VENDOR=infinix
+
+export DEVICE_BRINGUP_YEAR=2023
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -24,13 +25,12 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Initialize the helper for common
-setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}"
 
-# Copyright headers and guards
-write_headers "${DEVICE}"
+# Warning headers and guards
+write_headers
 
-# The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
 # Finish
