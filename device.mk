@@ -31,8 +31,9 @@ PRODUCT_PACKAGES += \
 
 # Init cripts
 PRODUCT_PACKAGES += \
-    init.mt6765.rc \
+    fstab.enableswap \
     fstab.mt6765 \
+    init.mt6765.rc \
     init.safailnet.rc
 
 # Keylayouts
