@@ -62,4 +62,6 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
+sed -i 's/AT+EAIC=2/AT+EAIC=3/g' "${BLOB_ROOT}/proprietary/lib64/libmtk-ril.so"
+
 "${MY_DIR}/setup-makefiles.sh"
