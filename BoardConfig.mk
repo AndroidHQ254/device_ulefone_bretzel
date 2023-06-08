@@ -12,7 +12,7 @@ BOARD_VENDOR := infinix
 TARGET_FLATTEN_APEX := true
 
 # Assertions
-TARGET_OTA_ASSERT_DEVICE := x610, x610_h651, Infinix-X610
+TARGET_OTA_ASSERT_DEVICE := x610,x610_h651,Infinix-X610
 
 # Architecture
 TARGET_ARCH := arm64
@@ -62,6 +62,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_x610_h651
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_BOOTIMG_HEADER_VERSION := 1
