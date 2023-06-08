@@ -93,6 +93,10 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     libshim_showlogo
 
+# Trust HAL
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
+
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_props.mk
 
