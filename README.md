@@ -19,12 +19,5 @@ Release Date | June 2019
 
 ![Infinix Note 6](https://fdn2.gsmarena.com/vv/pics/infinix/infinix-note-6-x610-3.jpg "Infinix Note 6")
 
-### Patches for fix video
-- https://github.com/UMIDIGI-MT6763-Development/external_skia_src_gpu
-- https://github.com/UMIDIGI-MT6763-Development/frameworks_base_libs_hwui_surfacetexture
-
-### Patches for fix fingerprint
-- https://github.com/UMIDIGI-MT6763-Development/frameworks_base_biometrics
-
-### Patches for fix offline charging
-- https://github.com/UMIDIGI-MT6763-Development/system_core/blob/master/fix-offline-charger.patch
+### Patches for fix video, fingerprint & offline charging:
+- https://github.com/UMIDIGI-MT6763-Development/patches_umidigi_breeze
